@@ -1,0 +1,516 @@
+/* Imports */
+@import url("assets/vendor/bootstrap/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
+/* Body, atributos globales */
+body
+{
+	margin: 0;
+	background-color: #f1f1f1;
+	font-family: "Open Sans", sans-serif;
+}
+
+a
+{
+	color: rgb(83, 137, 224);
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+/* Header Navbar (/assets/js/navbar.js) */
+#navbar
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: block;
+	transition: all 0.3s;
+}
+
+#navbar ul
+{
+	list-style: none;
+}
+
+#navbar a.nav-link
+{
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#navbar a.nav-link:hover
+{
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+}
+
+#navbar.fixed
+{
+	background-color: rgba(0.0, 0.0, 0.0, 0.9);
+}
+
+.text-upper-title
+{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* Secciones globales */
+section
+{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-repeat: repeat;
+}
+
+.section-dark
+{
+	background-color: rgba(0.0, 0.0, 0.0, 0.8);
+	background-image: url("assets/img/pattern.png");
+	color: white;
+}
+
+.section-light
+{	
+	background-image: url("assets/img/pattern2.png");
+	color: black;
+}
+
+.section-title
+{
+	margin-bottom: 20px;
+}
+
+/* Front Page: header */
+#front-page-header
+{
+	background: no-repeat center center;
+	background-color: #868e96;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 800px;
+}
+
+/* Front Page, sección: últimas noticias */
+.recent-news-top-col
+{
+	height: 810px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.recent-new-img-box
+{
+	width: 330px;
+	height: 250px;
+	overflow: hidden;
+}
+
+.recent-new-img
+{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	transition-duration: 500ms;
+	transform-origin: center;
+}
+
+.recent-new-img:hover
+{
+	transform: scale(1.1);
+}
+
+.recent-new-box
+{
+	height: 250px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.recent-new-title a
+{
+	color: black;
+}
+
+.recent-new-comments
+{
+	float: right;
+}
+
+/* Front Page, sección: top ventas */
+.top10-img-box
+{
+	width: 150px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.top10-img
+{
+	width: 100%;
+	height: 100%;
+	transition-duration: 500ms;
+	transform-origin: center;
+}
+
+.top10-img:hover
+{
+	transform: scale(0.9);
+}
+
+.top10-box
+{
+	height: 200px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.top10-price
+{
+	float: right;
+	color: rgb(83, 137, 224);
+}
+
+.top10-button
+{
+	margin-bottom: 10px;
+}
+
+/* Front Page, sección: últimos análisis */
+.last-reviews-col
+{
+	padding: 0;
+}
+
+.last-reviews-box
+{
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#last-review-video-box
+{
+	background: no-repeat center center;
+	background-color: rgba(0.0, 0.0, 0.0, 0.8);
+	background-size: cover;
+	padding: 0;
+	transition: all 0.3s;
+}
+
+.last-review-video
+{
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s;
+}
+
+.last-review-box
+{
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgb(34, 34, 34);
+	border-right: 1px solid white;
+	transition: all 0.3s;
+}
+
+.last-review-box:not(:last-child)
+{
+	border-bottom: 1px solid white;
+}
+
+.last-review-box .rating
+{
+	padding: 3px;
+	background-color: rgb(26, 217, 219);
+}
+
+.last-review-box a
+{
+	color: white;
+}
+
+.last-review-box-selected
+{
+	background-color: rgb(26, 217, 219);
+}
+
+.last-review-box-selected .rating
+{
+	background-color: rgb(34, 34, 34);
+}
+
+.last-review-image
+{
+	object-fit: cover;
+	width: 72px;
+	height: 72px;
+}
+
+/* Footer */
+footer
+{
+	border-top: 1px solid white;
+}
+
+footer section
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.section-footer
+{
+	background-color: rgba(0.0, 0.0, 0.0, 0.9);
+	background-image: url("assets/img/pattern.png");
+	color: white;
+}
+
+.first-section
+{
+	margin-top: 30px;
+}
+
+/* Otros */
+.border-box
+{
+	color: white;
+	padding: 60px;
+	background-color: rgba(0.0, 0.0, 0.0, 0.9);
+	border-left: 3px solid;
+	border-color: rgb(26, 217, 219);
+}
+
+.border-box-slim
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.top-separator
+{
+	margin-top: 20px;
+}
+
+/* Blog (Noticias) Page */
+.featured-post-box
+{
+	width: 100%;
+	height: 500px;
+}
+
+.featured-post-img-box
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.featured-post-img
+{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	transition-duration: 500ms;
+	transform-origin: center;
+}
+
+.featured-post-img:hover
+{
+	transform: scale(1.1);
+}
+
+.featured-post-title
+{
+	width: 100%;
+	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.featured-post-title a
+{
+	color: white;
+}
+
+/* Sidebar */
+.widget-content a h6
+{
+	color: black;
+}
+
+.sidebar-last-review-box:hover
+{
+	background-color: rgb(26, 217, 219);
+}
+
+/* Posts relacionados */
+.related-posts-box:not(:last-child)
+{
+	margin-right: 10px;
+}
+
+.related-posts-img-box
+{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.related-posts-img
+{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	transition-duration: 500ms;
+	transform-origin: center;
+}
+
+.related-posts-img:hover
+{
+	transform: scale(1.1);
+}
+
+.related-posts-title
+{
+	width: 100%;
+	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.related-posts-title a
+{
+	color: white;
+}
+
+/* Lista comentarios */
+.commentlist
+{
+	margin-top: 30px;
+}
+
+.commentlist ul, li
+{
+	list-style: none;
+}
+
+.commentlist img
+{
+	object-fit: cover;
+	width: 64px;
+	height: 64px;
+}
+
+.author-link
+{
+	color: black;
+}
+
+/* Platilla author */
+.author-box img
+{
+	width: 100%;
+}
+
+.author-img img
+{
+	min-height: 210px;
+}
+
+.author-box ul, li
+{
+	list-style: disc;
+}
+
+/* Página juegos */
+.game-box
+{	
+	width: 150px;
+	height: 200px;
+	max-width: 150px;
+	max-height: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.game-box img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.game-title
+{
+	/*visibility: hidden;*/
+	position: absolute;	
+	width: 100%;
+	margin: 0;
+	padding: 20px;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.game-title a
+{
+	color: white;
+}
+
+/* search-box */
+.search-box table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.search-box th, td
+{
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.search-box tr:nth-child(even)
+{
+	background-color: #f2f2f2;
+}
+
+.search-box tr:hover
+{
+	background-color: #ddd;
+}
+
+.search-box th
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+/* Archives */
+.archives-box
+{
+	margin-right: 20px;
+	margin-bottom: 20px;
+	max-width: 450px;
+	min-width: 200px;
+	background-color: #f2f2f2;
+	border: 2px solid rgb(83, 137, 224);
+	border-radius: 10px;
+}
