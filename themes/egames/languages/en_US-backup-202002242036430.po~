@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: egames\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-20 13:18+0000\n"
+"PO-Revision-Date: 2020-02-22 22:47+0000\n"
+"Last-Translator: usuario <adri1pawn@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Noticias"
+msgstr "News"
+
+msgid "Juegos"
+msgstr "Games"
+
+msgid "Iniciar sesión"
+msgstr "Log In"
+
+msgid "Tema creado por Adrián Ortega Rodríguez"
+msgstr "Theme created by Adrián Ortega Rodríguez"
+
+msgid "Funciona con"
+msgstr "Powered by"
+
+msgid "Archivos"
+msgstr "Archives"
+
+msgid "No se han encontrado nada"
+msgstr "No results found"
+
+msgid "Ir a Inicio"
+msgstr "Go Home"
+
+msgid "Categoría"
+msgstr "Category"
+
+msgid "Etiqueta"
+msgstr "Tag"
+
+msgid "Autor"
+msgstr "Author"
+
+msgid "Archivo"
+msgstr "Archive"
+
+msgid "Fecha"
+msgstr "Date"
+
+msgid "Título"
+msgstr "Title"
+
+msgid "Autores"
+msgstr "Authors"
+
+msgid "Videojuegos por autor"
+msgstr "Games per author"
+
+msgid "Categorías"
+msgstr "Categories"
+
+msgid "Páginas"
+msgstr "Pages"
+
+msgid "Posts diarios"
+msgstr "Daily Posts"
+
+msgid "Posts semanales"
+msgstr "Weekly Posts"
+
+msgid "Posts mensuales"
+msgstr "Monthly Posts"
+
+msgid "Posts anuales"
+msgstr "Anually Posts"
+
+msgid "Videojuegos"
+msgstr "Games"
+
+msgid "Registrado el"
+msgstr "Registration date:"
+
+msgid "Admin area"
+msgstr "Admin area"
+
+msgid "Cerrar sesión"
+msgstr "Log out"
+
+msgid "Redes sociales"
+msgstr "Social Networks"
+
+msgid "No tiene"
+msgstr "None"
+
+msgid "Últimos posts"
+msgstr "Latest Posts"
+
+msgid ""
+"EGames es una portal y tienda sobre videojuegos, podrás informarte de las "
+"últimas noticias y comprar los mejores videojuegos."
+msgstr ""
+"EGames is a portal and store about video games, you can get the latest news "
+"and buy the best video games."
+
+msgid "EGames"
+msgstr "EGames"
+
+msgid "Noticias recientes"
+msgstr "Recent News"
+
+msgid "Ver todas"
+msgstr "See All"
+
+msgid "Escrito por"
+msgstr "Posted by"
+
+msgid "comentarios"
+msgstr "comments"
+
+msgid "Top ventas"
+msgstr "Top Sales"
+
+msgid "Ver todos"
+msgstr "See All"
+
+msgid "Ver análisis"
+msgstr "Review"
+
+msgid "Comprar"
+msgstr "Buy"
+
+msgid "Últimos videojuegos"
+msgstr "Latest Games"
+
+msgid "Comentarios"
+msgstr "Comments"
+
+msgid "Nombre *"
+msgstr "Name *"
+
+msgid "Correo electrónico *"
+msgstr "E-mail *"
+
+msgid ""
+"Guardar mi nombre, correo electrónico y sitio web en este navegador para la "
+"próxima vez que haga un comentario."
+msgstr ""
+"Save my name, email and website in this browser for the next time I comment."
+
+msgid ""
+"Marque esta casilla para darnos permiso para publicar públicamente su "
+"comentario. (Acepta nuestra política de privacidad) *"
+msgstr ""
+"Check this box to give us permission to publicly post your comment. (Accept "
+"our privacy policy) *"
+
+msgid "Acepto la política de privacidad"
+msgstr "I accept the Privacy Policy"
+
+msgid "NO acepto la política de privacidad"
+msgstr "I DO NOT accept the privacy policy"
+
+msgid "a las"
+msgstr "at"
+
+msgid "URL Foto de perfil"
+msgstr "Profile Picture URL"
+
+msgid "Introduce la URL para tu foto de perfil."
+msgstr "Enter the URL for your profile picture."
+
+msgid "Introduce tu ID de"
+msgstr "Enter your ID:"
+
+msgid "ANTERIOR"
+msgstr "PREVIOUS"
+
+msgid "SIGUIENTE"
+msgstr "NEXT"
+
+msgid "No se han encontrado posts"
+msgstr "No posts found"
+
+msgid "Búsqueda"
+msgstr "Search"
+
+msgid "BUSCAR"
+msgstr "SEARCH"
+
+msgid "Noticias destacadas"
+msgstr "Breaking News"
+
+msgid "Últimas noticias"
+msgstr "Latest News"
+
+msgid "Fecha de lanzamiento:"
+msgstr "Release date:"
+
+msgid "Desarrollador:"
+msgstr "Developer:"
+
+msgid "Plataforma(s):"
+msgstr "Platform(s):"
+
+msgid "Género(s):"
+msgstr "Genre(s):"
+
+msgid "Uds. vendidas:"
+msgstr "Sold units:"
+
+msgid "Sin stock"
+msgstr "Out of Stock"
+
+msgid "Volver a juegos"
+msgstr "Go to Games"
+
+msgid "el"
+msgstr "at"
+
+msgid "visualizaciones"
+msgstr "views"
+
+msgid "Volver a noticias"
+msgstr "Go to News"
+
+msgid "En venta"
+msgstr "For sale"
+
+msgid "Wiki"
+msgstr "Wiki"

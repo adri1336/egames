@@ -1,22 +1,23 @@
 <?php
     get_header();
 ?>
+
 <section class="section-light first-section">
     <div class="container search-box">
         <div class="row">
             <div class="col">
                 <?php if($wp_the_query->post_count <= 0) : ?>
-                    <h2>No se han encontrado posts</h2>
+                    <h2><?php _e('No se han encontrado posts', 'egames'); ?></h2>
                     <h1 class="display-1">:/</h1>
                 <?php else : $counter = 1; ?>
-                    <h2 class="font-weight-bold">Búsqueda</h2>
+                    <h2 class="font-weight-bold"><?php _e('Búsqueda', 'egames'); ?></h2>
                     <table class="top-separator">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Fecha</th>
-                                <th>Autor</th>
-                                <th>Título</th>
+                                <th><?php _e('Fecha', 'egames'); ?></th>
+                                <th><?php _e('Autor', 'egames'); ?></th>
+                                <th><?php _e('Título', 'egames'); ?></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,7 +31,17 @@
                             <?php endwhile; ?>
                         </tbody>
                     </table>
-                <?php endif; ?>
+                <?php
+                    echo "<div class='row h-100 d-flex top-separator'><div class='col'>";
+                    //SEARCH
+                    $args = array(
+                        "mid_size" => 2,
+                        "screen_reader_text" => " "
+                    );
+                    the_posts_pagination($args);
+                    echo "</div></div>";
+                    endif;
+                ?>
             </div>
         </div>
     </div>

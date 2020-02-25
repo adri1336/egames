@@ -11,8 +11,8 @@
 	<div class="container h-100">
 		<div class="row h-100 align-items-center">
 			<div class="col-8 border-box">
-				<h1 class="font-weight-bold">EGames</h1>
-				<span class="subheading">EGames es una portal y tienda sobre videojuegos, podrás informarte de las últimas noticias y comprar los mejores videojuegos.</span>
+				<h1 class="font-weight-bold"><?php _e('EGames', 'egames'); ?></h1>
+				<span class="subheading"><?php _e('EGames es una portal y tienda sobre videojuegos, podrás informarte de las últimas noticias y comprar los mejores videojuegos.', 'egames'); ?></span>
 			</div>
 		</div>
 	</div>
@@ -25,8 +25,8 @@
 			<div class="col-8">
 				<div class="row section-title">
 					<div class="col p-0">
-						<h1>Noticias recientes</h1>
-						<h6><a href="<?php echo get_permalink(get_option("page_for_posts")); ?>">Ver todas</a></h6>
+						<h1><?php _e('Noticias recientes', 'egames'); ?></h1>
+						<h6><a href="<?php echo get_permalink(get_option("page_for_posts")); ?>"><?php _e('Ver todas', 'egames'); ?></a></h6>
 					</div>
 				</div>
 				<div class="row recent-news-top-col">
@@ -59,10 +59,10 @@
 												</a>
 											</h4>
 											<span class="text-upper-title">
-												Escrito por <a href="<?php echo get_author_posts_url(get_the_author_ID(), get_the_author()); ?>"><?php the_author(); ?></a>
+												<?php _e('Escrito por', 'egames'); ?> <a href="<?php echo get_author_posts_url(get_the_author_ID(), get_the_author()); ?>"><?php the_author(); ?></a>
 											</span>
 											<span class="recent-new-comments text-upper-title">											
-												<?php echo get_comments_number(); ?> comentarios												
+												<?php echo get_comments_number() . " " . __('comentarios', 'egames'); ?>
 											</span>
 											<hr>
 											<p class="text-justify">
@@ -80,8 +80,8 @@
 			<div class="col-4">
 				<div class="row section-title">
 					<div class="col p-0">
-						<h1>Top ventas</h1>
-						<h6><a href="<?php echo get_page_link(get_page_by_title("juegos")->ID); ?>">Ver todos</a></h6>
+						<h1><?php _e('Top ventas', 'egames'); ?></h1>
+						<h6><a href="<?php echo get_page_link(get_page_by_title("juegos")->ID); ?>"><?php _e('Ver todos', 'egames'); ?></a></h6>
 					</div>
 				</div>
 				<div class="row recent-news-top-col">
@@ -134,8 +134,8 @@
 												</span>
 												<span class="text-upper-title top10-price"><?php echo get_post_meta(get_the_ID(), "price", true); ?>€</span>
 												<hr>
-												<a href="<?php echo get_post_permalink(); ?>"><button type="button" class="btn btn-warning w-100 top10-button">Ver análisis</button></a>
-												<a href="<?php echo get_post_permalink(); ?>"><button type="button" class="btn btn-success w-100 top10-button">Comprar</button></a>
+												<a href="<?php echo get_post_permalink(); ?>"><button type="button" class="btn btn-warning w-100 top10-button"><?php _e('Ver análisis', 'egames'); ?></button></a>
+												<a href="<?php echo get_post_permalink(); ?>"><button type="button" class="btn btn-success w-100 top10-button"><?php _e('Comprar', 'egames'); ?></button></a>
 											</div>
 										</div>
 										<?php
@@ -155,8 +155,8 @@
 	<div class="container">
 		<div class="row section-title">
 			<div class="col p-0">
-				<h1>Últimos videojuegos</h1>
-				<h6><a href="<?php echo get_page_link(get_page_by_title("juegos")->ID); ?>">Ver todos</a></h6>
+				<h1><?php _e('Últimos videojuegos', 'egames'); ?></h1>
+				<h6><a href="<?php echo get_page_link(get_page_by_title("juegos")->ID); ?>"><?php _e('Ver todos', 'egames'); ?></a></h6>
 			</div>
 		</div>
 		<div class="row">

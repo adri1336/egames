@@ -15,6 +15,12 @@
 	}
 	add_action("admin_init", "egames");
 	add_action("wp_enqueue_scripts", "egames");
+	
+	function my_plugin_init()
+	{
+		load_plugin_textdomain("egames", false, dirname(plugin_basename(__FILE__))); 
+	}
+	add_action('init', 'my_plugin_init');
 
 	function plugin_custom_post_type()
 	{
@@ -29,18 +35,18 @@
 		);
 
 		$labels = array(
-			"name" => _x("Juegos", "plural"),
-			"singular_name" => _x("Juego", "singular"),
-			"menu_name" => _x("Juegos", "admin menu"),
-			"name_admin_bar" => _x("Juegos", "admin bar"),
-			"add_new" => _x("Añadir juego", "add new"),
-			"add_new_item" => __("Añadir juego"),
-			"new_item" => __("Añadir juego"),
-			"edit_item" => __("Editar juego"),
-			"view_item" => __("Ver juego"),
-			"all_items" => __("Todos los juegos"),
-			"search_items" => __("Buscar juegos"),
-			"not_found" => __("No se han encontrado juegos...")
+			"name" => __("Juegos", "egames"),
+			"singular_name" => __("Juego", "egames"),
+			"menu_name" => __("Juegos", "egames"),
+			"name_admin_bar" => __("Juegos", "egames"),
+			"add_new" => __("Añadir juego", "egames"),
+			"add_new_item" => __("Añadir juego", "egames"),
+			"new_item" => __("Añadir juego", "egames"),
+			"edit_item" => __("Editar juego", "egames"),
+			"view_item" => __("Ver juego", "egames"),
+			"all_items" => __("Todos los juegos", "egames"),
+			"search_items" => __("Buscar juegos", "egames"),
+			"not_found" => __("No se han encontrado juegos...", "egames")
 		);
 
 		$args = array(
@@ -98,14 +104,14 @@
 		<div class="metabox">
 			<table class="form-table">
 				<tr>
-					<th><label for="release_date">Fecha de lanzamiento</label></th>
+					<th><label for="release_date"><?php _e('Fecha de lanzamiento', 'egames'); ?></label></th>
 					<td>
 						<input type="date" id="release_date" name="release_date" value="<?php echo esc_attr($release_date) ?>">
 						<br/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="platforms">Plataformas</label></th>
+					<th><label for="platforms"><?php _e('Plataformas', 'egames'); ?></label></th>
 					<td>
 						<br/>
 						<input type="checkbox" id="platforms" name="platforms[]" value="PS4" <?php if(in_array("PS4", $platforms)) echo "checked"; ?>> PS4<br/>
@@ -115,43 +121,43 @@
 					</td>
 				</tr>
 				<tr>
-					<th><label for="genres">Géneros</label></th>
+					<th><label for="genres"><?php _e('Géneros', 'egames'); ?></label></th>
 					<td>
 						<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="action" <?php if(in_array("action", $genres)) echo "checked"; ?>> Acción<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="shooter" <?php if(in_array("shooter", $genres)) echo "checked"; ?>> Shooter<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="adventure" <?php if(in_array("adventure", $genres)) echo "checked"; ?>> Aventura<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="casual" <?php if(in_array("casual", $genres)) echo "checked"; ?>> Casual<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="driving" <?php if(in_array("driving", $genres)) echo "checked"; ?>> Conducción<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="sports" <?php if(in_array("sports", $genres)) echo "checked"; ?>> Deportes<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="strategy" <?php if(in_array("strategy", $genres)) echo "checked"; ?>> Estrategia<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="mmo" <?php if(in_array("mmo", $genres)) echo "checked"; ?>> MMO<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="roleplay" <?php if(in_array("roleplay", $genres)) echo "checked"; ?>> Rol<br/>
-						<input type="checkbox" id="genres" name="genres[]" value="simulation" <?php if(in_array("simulation", $genres)) echo "checked"; ?>> Simulación<br/>
+						<input type="checkbox" id="genres" name="genres[]" value="action" <?php if(in_array("action", $genres)) echo "checked"; ?>> <?php _e('Acción', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="shooter" <?php if(in_array("shooter", $genres)) echo "checked"; ?>> <?php _e('Shooter', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="adventure" <?php if(in_array("adventure", $genres)) echo "checked"; ?>> <?php _e('Aventura', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="casual" <?php if(in_array("casual", $genres)) echo "checked"; ?>> <?php _e('Casual', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="driving" <?php if(in_array("driving", $genres)) echo "checked"; ?>> <?php _e('Conducción', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="sports" <?php if(in_array("sports", $genres)) echo "checked"; ?>> <?php _e('Deportes', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="strategy" <?php if(in_array("strategy", $genres)) echo "checked"; ?>> <?php _e('Estrategia', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="mmo" <?php if(in_array("mmo", $genres)) echo "checked"; ?>> <?php _e('MMO', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="roleplay" <?php if(in_array("roleplay", $genres)) echo "checked"; ?>> <?php _e('Rol', 'egames'); ?><br/>
+						<input type="checkbox" id="genres" name="genres[]" value="simulation" <?php if(in_array("simulation", $genres)) echo "checked"; ?>> <?php _e('Simulación', 'egames'); ?><br/>
 						
 					</td>
 				</tr>
 				<tr>
-					<th><label for="developer">Desarrollador</label></th>
+					<th><label for="developer"><?php _e('Desarrollador', 'egames'); ?></label></th>
 					<td>
 						<input type="text" id="developer" name="developer" value="<?php echo esc_attr($developer) ?>">
 						<br/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="youtube_id">ID YouTube</label></th>
+					<th><label for="youtube_id"><?php _e('ID YouTube', 'egames'); ?></label></th>
 					<td>
 						<input type="text" id="youtube_id" name="youtube_id" value="<?php echo esc_attr($youtube_id) ?>">
 						<br/>
-						<span class="description">Por ejemplo: QkkoHAzjnUs</span>
+						<span class="description"><?php _e('Por ejemplo: QkkoHAzjnUs', 'egames'); ?></span>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="score">Puntuación</label></th>
+					<th><label for="score"><?php _e('Puntuación', 'egames'); ?></label></th>
 					<td>
 						<input type="number" step=".01" min="0" max="10" id="score" name="score" value="<?php echo esc_attr($score) ?>">
 						<br/>
-						<span class="description">Puntuación máxima: 10</span>
+						<span class="description"><?php _e('Puntuación máxima: 10', 'egames'); ?></span>
 					</td>
 				</tr>
 			</table>
@@ -172,36 +178,36 @@
 		<div class="metabox">
 			<table class="form-table">
 				<tr>
-					<th><label for="for_sale">Vender</label></th>
+					<th><label for="for_sale"><?php _e('Vender', 'egames'); ?></label></th>
 					<td>
 						<input type="checkbox" id="for_sale" name="for_sale" value="1" <?php if($for_sale) echo "checked"; ?>>
 						<br/>
-						<span class="description">Marca esta casilla para vender el juego</span>
+						<span class="description"><?php _e('Marca esta casilla para vender el juego', 'egames'); ?></span>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="price">Precio</label></th>
+					<th><label for="price"><?php _e('Precio', 'egames'); ?></label></th>
 					<td>
 						<input type="number" step=".01" min="0" id="price" name="price" value="<?php echo esc_attr($price) ?>">
 						<br/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="box_image_url">Imágen carátula URL</label></th>
+					<th><label for="box_image_url"><?php _e('Imágen carátula URL', 'egames'); ?></label></th>
 					<td>
 						<input type="text" id="box_image_url" name="box_image_url" value="<?php echo esc_attr($box_image_url) ?>">
 						<br/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="stock">Disponibilidad</label></th>
+					<th><label for="stock"><?php _e('Disponibilidad', 'egames'); ?></label></th>
 					<td>
 						<input type="number" min="0" id="stock" name="stock" value="<?php echo esc_attr($stock) ?>">
 						<br/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="sales">Ventas</label></th>
+					<th><label for="sales"><?php _e('Ventas', 'egames'); ?></label></th>
 					<td>
 						<input type="number" min="0" id="sales" name="sales" value="<?php echo esc_attr($sales) ?>">
 						<br/>

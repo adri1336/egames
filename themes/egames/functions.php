@@ -11,6 +11,9 @@
 
 		wp_register_script("last-reviews.js", get_template_directory_uri() . "/assets/js/last-reviews.js", null, null, true);
 		wp_enqueue_script("last-reviews.js");
+
+		wp_register_script("language-switcher.js", get_template_directory_uri() . "/assets/js/language-switcher.js", null, null, true);
+		wp_enqueue_script("language-switcher.js");
     }
 	add_action("wp_enqueue_scripts", "add_scripts_to_my_theme");
 	
@@ -19,10 +22,26 @@
 		?>
 			<script type="text/javascript">
 				let theme_directory = "<?php echo get_template_directory_uri(); ?>";
-			</script> 
+			</script>
 		<?php
 	} 
 	add_action("wp_head", "loadDirectory");
+
+	//Idiomas
+	function loadThemeTextDomain()
+	{
+		load_theme_textdomain("egames", TEMPLATEPATH."/languages");
+	}
+	add_action("init", "loadThemeTextDomain");
+
+	if(isset($_GET['language'])) :
+		function customLocale($locale)
+		{
+			//switch_to_locale('en_US');
+			return esc_attr($_GET['language']);
+		}
+		add_filter('locale', 'customLocale');
+	endif;
 
 	/* Funcionalidad */
 	function custom_login_logo()
@@ -52,6 +71,7 @@
 	}
 	add_filter("login_headertitle", "my_login_logo_url_title");*/
 
+	//Marca el checkbox de recordar usuario
 	function login_checked_remember_me()
 	{
 		add_filter("login_footer", "rememberme_checked");
@@ -168,7 +188,7 @@
 	//Caja formulario para comentar
 	function cutom_comment_form_defaults($defaults)
 	{
-		$defaults["title_reply"] = "<h4 class='text-upper-title'>Comentarios (" . get_comments_number() . ")</h4>";
+		$defaults["title_reply"] = "<h4 class='text-upper-title'>" . __('Comentarios', 'egames') . "(" . get_comments_number() . ")</h4>";
 		//$defaults["logged_in_as"] = "";
 		$defaults["comment_field"] = "<textarea id='comment' name='comment' class='form-control w-100' rows='5' maxlength='65525' required='required'></textarea>";
 		$defaults["submit_button"] = '<input name="%1$s" type="submit" id="%2$s" class="%3$s btn btn-dark" value="%4$s" style="margin-top: 10px;" />';
@@ -182,13 +202,13 @@
 		$aux_fields["author"] = "
 		<div class='form-row' style='margin-top: 5px'>
 			<div class='col'>
-				<input type='text' class='form-control' id='author' name='author' placeholder='Nombre *' required='required'>
+				<input type='text' class='form-control' id='author' name='author' placeholder='" . __('Nombre *', 'egames') . "' required='required'>
 			</div>
 		";
 
 		$aux_fields["email"] = "
 			<div class='col'>
-				<input type='text' class='form-control' id='email' name='email' placeholder='Correo electrónico *' required='required'>
+				<input type='text' class='form-control' id='email' name='email' placeholder='" . __('Correo electrónico *', 'egames') . "' required='required'>
 			</div>
 		</div>
 		";
@@ -198,14 +218,14 @@
 		<div class='form-check' style='margin-top: 5px'>
 			<p class='comment-form-public'>
 				<input id='cookies' name='cookies' type='checkbox' class='form-check-input'/>
-				<label class='form-check-label' for='cookies'>Guardar mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que haga un comentario.</label>
+				<label class='form-check-label' for='cookies'>" . __('Guardar mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que haga un comentario.', 'egames') . "</label>
 			</p>
 		";
 
 		$aux_fields["consent"] = "
 			<p class='comment-form-public'>
 				<input id='consent' name='consent' type='checkbox' class='form-check-input' required='required'/>
-				<label class='form-check-label' for='consent'>Marque esta casilla para darnos permiso para publicar públicamente su comentario. (Acepta nuestra política de privacidad) *</label>
+				<label class='form-check-label' for='consent'>" . __e('Marque esta casilla para darnos permiso para publicar públicamente su comentario. (Acepta nuestra política de privacidad) *', 'egames') . "</label>
 			</p>
 		</div>";
 		return $aux_fields;
@@ -216,8 +236,8 @@
 	function save_comment_meta_checkbox($comment_id)
 	{
 		$save_meta_checkbox = $_POST["consent"];
-		if($save_meta_checkbox == "on") : $value = "Acepto la política de privacidad";
-		else : $value = "NO acepto la política de privacidad";
+		if($save_meta_checkbox == "on") : $value = __('Acepto la política de privacidad', 'egames');
+		else : $value = __('NO acepto la política de privacidad', 'egames');
 		endif;
 		add_comment_meta($comment_id, "consent", $value, true);
 	}
@@ -271,7 +291,7 @@
 					<h5 class="font-weight-bold"><?php echo comment_author(); ?></h5>
 				</a>
 				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-					<h6><small><?php echo get_comment_date() . " a las " . get_comment_time(); ?></small></h6>
+					<h6><small><?php echo get_comment_date() . " " . __('a las', 'egames') . " " . get_comment_time(); ?></small></h6>
 				</a>
 				<p>
 					<?php echo get_comment_text(); ?>
@@ -300,26 +320,26 @@
 	function add_author_custom_fields($user)
     {
         ?>
-        <h3>URL Foto de perfil</h3>
+        <h3><?php _e('URL Foto de perfil', 'egames'); ?></h3>
         <table class="form-table">
             <tr>
-                <th><label for="userpic">URL Foto de perfil</label></th>
+                <th><label for="userpic"><?php _e('URL Foto de perfil', 'egames'); ?></label></th>
                 <td>
                     <input type="text" name="userpic" id="userpic" value="<?php echo esc_attr( get_the_author_meta( 'userpic', $user->ID ) ); ?>" class="regular-text"/>
                     <br />
-                    <span class="description">Introduce la URL para tu foto de perfil.</span>
+                    <span class="description"><?php _e('Introduce la URL para tu foto de perfil.', 'egames'); ?></span>
                 </td>
             </tr>
         </table>
 
-        <h3>Redes sociales</h3>
+        <h3><?php _e('Redes sociales', 'egames'); ?></h3>
         <table class="form-table">
             <tr>
                 <th><label for="psn">PlayStation Network</label></th>
                 <td>
                     <input type="text" name="psn" id="psn" value="<?php echo esc_attr( get_the_author_meta( 'psn', $user->ID ) ); ?>" class="regular-text"/>
                     <br />
-                    <span class="description">Introduce tu ID de PlayStation Network.</span>
+                    <span class="description"><?php _e('Introduce tu ID de', 'egames'); ?> PlayStation Network.</span>
                 </td>
             </tr>
 
@@ -328,7 +348,7 @@
                 <td>
                     <input type="text" name="xlive" id="xlive" value="<?php echo esc_attr( get_the_author_meta( 'xlive', $user->ID ) ); ?>" class="regular-text"/>
                     <br />
-                    <span class="description">Introduce tu ID de Xbox Live.</span>
+                    <span class="description"><?php _e('Introduce tu ID de', 'egames'); ?> Xbox Live.</span>
                 </td>
             </tr>
 
@@ -337,7 +357,7 @@
                 <td>
                     <input type="text" name="nswitch" id="nswitch" value="<?php echo esc_attr( get_the_author_meta( 'nswitch', $user->ID ) ); ?>" class="regular-text"/>
                     <br />
-                    <span class="description">Introduce tu ID de Nintendo Network.</span>
+                    <span class="description"><?php _e('Introduce tu ID de', 'egames'); ?> Nintendo Network.</span>
                 </td>
             </tr>
 
@@ -346,7 +366,7 @@
                 <td>
                     <input type="text" name="steam" id="steam" value="<?php echo esc_attr( get_the_author_meta( 'steam', $user->ID ) ); ?>" class="regular-text"/>
                     <br />
-                    <span class="description">Introduce tu ID de Steam.</span>
+                    <span class="description"><?php _e('Introduce tu ID de', 'egames'); ?> de Steam.</span>
                 </td>
             </tr>
         </table>
@@ -366,5 +386,4 @@
 	}
 	add_action('personal_options_update','update_custom_fields');
 	add_action('edit_user_profile_update','update_custom_fields');
-
 ?>

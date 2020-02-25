@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 
 /* Body, atributos globales */
+html, body
+{
+	height: 100%;
+}
+
 body
 {
 	margin: 0;
@@ -57,10 +62,29 @@ a:hover
 	background-color: rgba(0.0, 0.0, 0.0, 0.9);
 }
 
+#navbar-img
+{
+	padding: 10px;
+}
+
 .text-upper-title
 {
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+/* Footer */
+footer
+{
+	margin: 0;
+	padding: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-top: 1px solid white;
+
+	background-color: rgba(0.0, 0.0, 0.0, 0.9);
+	background-image: url("assets/img/pattern.png");
+	color: white;
 }
 
 /* Secciones globales */
@@ -87,6 +111,11 @@ section
 .section-title
 {
 	margin-bottom: 20px;
+}
+
+.first-section
+{
+	margin-top: 30px;
 }
 
 /* Front Page: header */
@@ -257,30 +286,6 @@ section
 	height: 72px;
 }
 
-/* Footer */
-footer
-{
-	border-top: 1px solid white;
-}
-
-footer section
-{
-	padding-top: 40px;
-	padding-bottom: 40px;
-}
-
-.section-footer
-{
-	background-color: rgba(0.0, 0.0, 0.0, 0.9);
-	background-image: url("assets/img/pattern.png");
-	color: white;
-}
-
-.first-section
-{
-	margin-top: 30px;
-}
-
 /* Otros */
 .border-box
 {
@@ -438,16 +443,20 @@ footer section
 
 /* Página juegos */
 .game-box
-{	
-	width: 150px;
-	height: 200px;
-	max-width: 150px;
-	max-height: 200px;
-	margin-left: 10px;
-	margin-right: 10px;
+{
+	margin-bottom: 20px;
+	height: 210px;
 }
 
-.game-box img
+.game-img
+{
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.game-img img
 {
 	width: 100%;
 	height: 100%;
@@ -456,12 +465,11 @@ footer section
 .game-title
 {
 	/*visibility: hidden;*/
-	position: absolute;	
+	position: absolute;
 	width: 100%;
 	margin: 0;
+	bottom: 0px;
 	padding: 20px;
-	left: 0;
-	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
 }
@@ -513,4 +521,31 @@ footer section
 	background-color: #f2f2f2;
 	border: 2px solid rgb(83, 137, 224);
 	border-radius: 10px;
+}
+
+/* Form login */
+#loginform
+{
+	margin-top: 30px;
+}
+
+#loginform label
+{
+	width: 100%;
+	font-weight: bold;
+}
+
+#loginform input:not([type='checkbox'])
+{
+	width: 100%;
+}
+
+.login-submit input[type='submit']
+{
+	font-weight: bold;
+	background-color: rgb(26, 217, 219);
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
 }

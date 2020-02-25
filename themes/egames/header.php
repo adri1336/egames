@@ -17,9 +17,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex align-self-center p-0">
-						<a class="nav-link" href="<?php echo get_home_url(); ?>" <?php if(is_front_page()) echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>>Inicio</a>
-						<a class="nav-link" href="<?php echo get_permalink(get_page_by_title("noticias")); ?>" <?php if(get_query_var("pagename") == "noticias") echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>>Noticias</a>
-						<a class="nav-link" href="<?php echo get_page_link(get_page_by_title("juegos")->ID); ?>" <?php if(get_query_var("pagename") == "juegos") echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>>Juegos</a>
+						<a class="nav-link" href="<?php echo get_home_url(); ?>" <?php if(is_front_page()) echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>><?php _e('Inicio', 'egames'); ?></a>
+						<a class="nav-link" href="<?php echo get_permalink(get_page_by_title("noticias")); ?>" <?php if(get_query_var("pagename") == "noticias") echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>><?php _e('Noticias', 'egames'); ?></a>
+						<a class="nav-link" href="<?php echo get_page_link(get_page_by_title("juegos")->ID); ?>" <?php if(get_query_var("pagename") == "juegos") echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>><?php _e('Juegos', 'egames'); ?></a>
+						<a class="nav-link" href="<?php echo get_page_link(get_page_by_title("wiki")->ID); ?>" <?php if(get_query_var("pagename") == "wiki") echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>><?php _e('Wiki', 'egames'); ?></a>
 						<?php
 						if(is_user_logged_in()) :
 							$user = wp_get_current_user();
@@ -28,7 +29,7 @@
 							<?php
 						else :
 							?>
-							<a class="nav-link" href="<?php echo wp_login_url(); ?>">Iniciar sesión</a>
+							<a class="nav-link" href="<?php echo get_page_link(get_page_by_title("login")->ID);/*echo wp_login_url();*/ ?>" <?php if(get_query_var("pagename") == "login") echo "style='border-bottom: 1px solid rgb(26, 217, 219);'"; ?>><?php _e('Iniciar sesión', 'egames'); ?></a>
 							<?php
 						endif;
 						?>

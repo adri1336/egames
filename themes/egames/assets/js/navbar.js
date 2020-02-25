@@ -4,8 +4,8 @@ var prevScrollpos = window.pageYOffset;
 
 if(front_page)
 {
-    navbar_img.src = theme_directory + "/assets/img/logo.png";
-    navbar.classList.remove("fixed");
+    /*navbar_img.src = theme_directory + "/assets/img/logo.png";
+    navbar.classList.remove("fixed");*/
 }
 
 window.onscroll = function()
@@ -20,13 +20,13 @@ window.onscroll = function()
         }
         else
         {
-            navbar_img.src = theme_directory + "/assets/img/logo.png";
-            navbar.classList.remove("fixed");
+            /*navbar_img.src = theme_directory + "/assets/img/logo.png";
+            navbar.classList.remove("fixed");*/
         }
     }
     
     if(prevScrollpos > currentScrollPos) navbar.style.top = "0";
-    else navbar.style.top = "-50px";
+    else navbar.style.top = "-60px";
     
     prevScrollpos = currentScrollPos;
 }

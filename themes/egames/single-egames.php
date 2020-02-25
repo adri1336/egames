@@ -17,9 +17,9 @@
                 <div class="row">
                     <div class="col">
                         <p class="lead">
-                            Escrito por 
+                            <?php _e('Escrito por', 'egames'); ?> 
                             <a href="<?php echo get_author_posts_url(get_the_author_ID(), get_the_author()); ?>"><?php the_author(); ?></a>
-                            el <?php echo get_the_date("d F Y") . " " . get_the_time(); ?>
+                            <?php _e('el', 'egames'); ?> <?php echo get_the_date("d F Y") . " " . get_the_time(); ?>
                         </p>
                     </div>
                     <div class="col-2 text-right">
@@ -35,18 +35,18 @@
                                 <img src="<?php echo get_post_meta(get_the_ID(), "box_image_url", true) ?>" class="w-100"/>
                             </div>
                             <div class="col-8 align-self-center">
-                                <h2>En venta</h2>
+                                <h2><?php _e('En venta', 'egames'); ?></h2>
                                 <h5 style="color: rgb(83, 137, 224);"><?php echo get_post_meta(get_the_ID(), "price", true); ?>€</h5><br>
                                 <?php
                                     $stock = get_post_meta(get_the_ID(), "stock", true);
                                 ?>
 
                                 <p>
-                                    Fecha de lanzamiento: <?php echo get_post_meta($postID, "release_date", true) ?><br>
-                                    Desarrollador: <?php echo get_post_meta($postID, "developer", true) ?><br>
+                                    <?php echo __('Fecha de lanzamiento:', 'egames') . " " . get_post_meta($postID, "release_date", true) ?><br>
+                                    <?php echo __('Desarrollador:', 'egames') . " " . get_post_meta($postID, "developer", true) ?><br>
                                     
                                     <?php
-                                    echo "Plataforma(s): ";
+                                    echo __('Plataforma(s):', 'egames') . " ";
                                     $platforms = get_post_meta($postID, "platforms", true);
                                     foreach($platforms as $platform) :
                                         echo "$platform ";
@@ -54,7 +54,7 @@
                                     ?><br>
 
                                     <?php
-                                    echo "Género(s): ";
+                                    echo __('Género(s):', 'egames') . " ";
                                     $genres = get_post_meta($postID, "genres", true);
                                     foreach($genres as $genre) :
                                         echo "$genre ";
@@ -62,11 +62,11 @@
                                     ?><br>
                                 </p>
 
-                                <!--<h6>Uds. disponibles: <?php echo $stock; ?></h6>-->
-                                <h6>Uds. vendidas: <?php echo get_post_meta(get_the_ID(), "sales", true); ?></h6>
+                                <!--<h6>Uds. disponibles: <?php /*echo $stock;*/ ?></h6>-->
+                                <h6><?php echo __('Uds. vendidas:', 'egames') . " " . get_post_meta(get_the_ID(), "sales", true); ?></h6>
                                 <?php
-                                    if($stock > 0) echo "<button type='button' class='btn btn-success w-50'>Comprar</button>";
-                                    else echo "<button type='button' class='btn btn-danger w-50'>Sin stock</button>";
+                                    if($stock > 0) echo "<button type='button' class='btn btn-success w-50'>" . __('Comprar', 'egames') . "</button>";
+                                    else echo "<button type='button' class='btn btn-danger w-50'>" . __('Sin stock', 'egames') . "</button>";
                                 ?>
                             </div>
                         </div>
@@ -94,11 +94,11 @@
                 <hr>
                 <p>
                     <span style="float: right;">
-                        <a href="<?php echo get_permalink(get_page_by_title("juegos")); ?>" class="font-weight-bold">← Volver a juegos</a>
+                        <a href="<?php echo get_permalink(get_page_by_title("juegos")); ?>" class="font-weight-bold">← <?php _e('Volver a juegos', 'egames'); ?></a>
                     </span><br>
                 </p>
                     
-                <!-- Posts destacados -->
+                <!-- Posts relacionados -->
                 <div class="container">
                     <div class="row">
                         <?php

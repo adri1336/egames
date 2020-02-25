@@ -1,0 +1,61 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: egames\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-24 18:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+msgid "Juegos"
+msgstr ""
+
+msgid "Juego"
+msgstr ""
+
+msgid "Añadir juego"
+msgstr ""
+
+msgid "Editar juego"
+msgstr ""
+
+msgid "Ver juego"
+msgstr ""
+
+msgid "Todos los juegos"
+msgstr ""
+
+msgid "Buscar juegos"
+msgstr ""
+
+msgid "No se han encontrado juegos..."
+msgstr ""
+
+msgid "Fecha de lanzamiento"
+msgstr ""
+
+msgid "Plataformas"
+msgstr ""
+
+msgid "Géneros"
+msgstr ""
+
+msgid "Desarrollador"
+msgstr ""
+
+msgid "ID YouTube"
+msgstr ""
+
+msgid "Puntuación"
+msgstr ""
+
+msgid "Por ejemplo: QkkoHAzjnUs"
+msgstr ""

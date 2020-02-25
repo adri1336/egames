@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: egames\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-24 17:50+0000\n"
+"PO-Revision-Date: 2020-02-24 17:51+0000\n"
+"Last-Translator: usuario <adri1pawn@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#. Author of the plugin
+msgid "Adrián Ortega Rodríguez"
+msgstr "Adrián Ortega Rodríguez"
+
+#. Name of the plugin
+msgid "egames"
+msgstr "egames"
+
+msgid "Juegos"
+msgstr "Games"

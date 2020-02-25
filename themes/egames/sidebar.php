@@ -2,7 +2,7 @@
     
     <div class="widget last-entries section-title">
         <div class="widget-title">
-            <h4 class="font-weight-bold">Noticias destacadas</h4>
+            <h4 class="font-weight-bold"><?php _e('Noticias destacadas', 'egames'); ?></h4>
         </div>
         <div class="container widget-content">
             <?php
@@ -40,7 +40,7 @@
 
     <div class="widget categories section-title">
         <div class="widget-title">
-            <h4 class="font-weight-bold">Categorías</h4>
+            <h4 class="font-weight-bold"><?php _e('Categorías', 'egames'); ?></h4>
         </div>
         <div class="container widget-content">
             <div class="row">
@@ -57,7 +57,7 @@
 
     <div class="widget last-entries section-title">
         <div class="widget-title">
-            <h4 class="font-weight-bold">Últimos videojuegos</h4>
+            <h4 class="font-weight-bold"><?php _e('Últimos videojuegos', 'egames'); ?></h4>
         </div>
         <div class="container widget-content">
             <?php
@@ -107,7 +107,7 @@
 
     <div class="widget last-entries section-title">
         <div class="widget-title">
-            <h4 class="font-weight-bold">Últimas noticias</h4>
+            <h4 class="font-weight-bold"><?php _e('Últimas noticias', 'egames'); ?></h4>
         </div>
         <div class="container widget-content">
             <?php

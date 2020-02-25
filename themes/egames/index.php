@@ -91,10 +91,10 @@
 										</a>
 									</h4>
 									<span class="text-upper-title">
-										Escrito por <a href="<?php echo get_author_posts_url(get_the_author_ID(), get_the_author()); ?>"><?php the_author(); ?></a>
+										<?php _e('Escrito por', 'egames'); ?> <a href="<?php echo get_author_posts_url(get_the_author_ID(), get_the_author()); ?>"><?php the_author(); ?></a>
 									</span>
 									<span class="recent-new-comments text-upper-title">											
-										<?php echo get_comments_number(); ?> comentarios												
+										<?php echo get_comments_number() . " " . __('comentarios', 'egames'); ?>
 									</span>
 									<hr>
 									<p class="text-justify">
@@ -107,12 +107,12 @@
 					endif;
 				?>				
 				<div class="row">
-					<div class="col-2 p-0">
+					<div class="col-3 p-0">
 						<?php
 							if($paged > 1) : ?>
 								<a href="<?php echo get_permalink(get_page_by_title('noticias')) . 'page/' . ($paged - 1) . '/' ?>">
 							<?php endif; ?>
-								<button type="button" class="btn btn-warning w-100 <?php if($paged <= 1) echo "disabled"; ?>">ANTERIOR</button>
+								<button type="button" class="btn btn-warning w-100 <?php if($paged <= 1) echo "disabled"; ?>"><?php _e('ANTERIOR', 'egames'); ?></button>
 							<?php
 							if($paged > 1) : ?>
 								</a>
@@ -132,12 +132,12 @@
 							endif;
 						?>
 					</div>
-					<div class="col-2 p-0">
+					<div class="col-3 p-0">
 						<?php
 							if($total_pages > 1 && $paged < $total_pages) : ?>
 								<a href="<?php echo get_permalink(get_page_by_title('noticias')) . 'page/' . ($paged + 1) . '/' ?>">
 							<?php endif; ?>
-								<button type="button" class="btn btn-warning w-100 <?php if($paged >= $total_pages) echo "disabled"; ?>">SIGUIENTE</button>
+								<button type="button" class="btn btn-warning w-100 <?php if($paged >= $total_pages) echo "disabled"; ?>"><?php _e('SIGUIENTE', 'egames'); ?></button>
 							<?php
 							if($total_pages > 1 && $paged < $total_pages) : ?>
 								</a>

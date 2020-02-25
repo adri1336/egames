@@ -18,7 +18,7 @@
                     <div class="col">
                         <h2 class="font-weight-bold">
                             <?php echo get_the_author_meta("display_name", $author); ?>
-                            <h6>Registrado el <?php echo get_the_author_meta("user_registered", $author); ?></h6>
+                            <h6><?php echo __('Registrado el', 'egames') . " " . get_the_author_meta("user_registered", $author); ?></h6>
                             <?php
                             $roles = $user_meta->roles;
                             foreach($roles as $role) :
@@ -35,14 +35,14 @@
                 <?php if(get_current_user_id() == $author) : ?>
                     <div class="row top-separator">
                         <div class="col">
-                            <a href="<?php echo admin_url(); ?>"><button type="button" class="btn btn-dark">Admin area</button></a> <a href="<?php echo wp_logout_url(); ?>"><button type="button" class="btn btn-danger">Cerrar sesión</button></a>
+                            <a href="<?php echo admin_url(); ?>"><button type="button" class="btn btn-dark"><?php _e('Admin area', 'egames'); ?></button></a> <a href="<?php echo wp_logout_url(home_url()); ?>"><button type="button" class="btn btn-danger"><?php _e('Cerrar sesión', 'egames'); ?></button></a>
                         </div>
                     </div>
                 <?php endif; ?>
 
                 <div class="row top-separator">
                     <div class="col">
-                        <h2 class="font-weight-bold">Redes sociales</h2>
+                        <h2 class="font-weight-bold"><?php _e('Redes sociales', 'egames'); ?></h2>
                     </div>
                 </div>
                 <div class="row">
@@ -52,7 +52,7 @@
                     <div class="col w-100">
                         <h6 class="font-weight-bold">PlayStation Network</h6>
                         <?php
-                            if(get_the_author_meta("psn", $author) == "") : echo "<small>No tiene</small>";
+                            if(get_the_author_meta("psn", $author) == "") : echo "<small>" . __('No tiene', 'egames') . "</small>";
                             else : echo "<small><i>" . get_the_author_meta("psn", $author) . "</i></small>";
                             endif;
                         ?>
@@ -64,7 +64,7 @@
                     <div class="col w-100">
                         <h6 class="font-weight-bold">Xbox Live</h6>
                         <?php
-                            if(get_the_author_meta("xlive", $author) == "") : echo "<small>No tiene</small>";
+                            if(get_the_author_meta("xlive", $author) == "") : echo "<small>" . __('No tiene', 'egames') . "</small>";
                             else : echo "<small><i>" . get_the_author_meta("xlive", $author) . "</i></small>";
                             endif;
                         ?>
@@ -78,7 +78,7 @@
                     <div class="col w-100">
                         <h6 class="font-weight-bold">Nintendo Network</h6>
                         <?php
-                            if(get_the_author_meta("nswitch", $author) == "") : echo "<small>No tiene</small>";
+                            if(get_the_author_meta("nswitch", $author) == "") : echo "<small>" . __('No tiene', 'egames') . "</small>";
                             else : echo "<small><i>" . get_the_author_meta("nswitch", $author) . "</i></small>";
                             endif;
                         ?>
@@ -90,7 +90,7 @@
                     <div class="col w-100">
                         <h6 class="font-weight-bold">Steam</h6>
                         <?php
-                            if(get_the_author_meta("steam", $author) == "") : echo "<small>No tiene</small>";
+                            if(get_the_author_meta("steam", $author) == "") : echo "<small>" . __('No tiene', 'egames') . "</small>";
                             else : echo "<small><i>" . get_the_author_meta("steam", $author) . "</i></small>";
                             endif;
                         ?>
@@ -99,13 +99,14 @@
                 
                 <div class="row top-separator">
                     <div class="col">
-                        <h2 class="font-weight-bold">Últimos posts</h2>
+                        <h2 class="font-weight-bold"><?php _e('Últimos posts', 'egames'); ?></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <ul>
+                        <ul>                            
                             <?php
+                            //wp_get_arhives();
                             $args = array(
                                 "posts_per_page" => 10,
                                 "orderby" => "date",

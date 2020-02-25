@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: egames\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-24 18:16+0000\n"
+"PO-Revision-Date: 2020-02-24 18:20+0000\n"
+"Last-Translator: usuario <adri1pawn@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+msgid "Juegos"
+msgstr "Games"
+
+msgid "Juego"
+msgstr "Game"
+
+msgid "Añadir juego"
+msgstr "Add game"
+
+msgid "Editar juego"
+msgstr "Edit game"
+
+msgid "Ver juego"
+msgstr "See game"
+
+msgid "Todos los juegos"
+msgstr "All Games"
+
+msgid "Buscar juegos"
+msgstr "Search games"
+
+msgid "No se han encontrado juegos..."
+msgstr "No games found..."
+
+msgid "Fecha de lanzamiento"
+msgstr "Release date"
+
+msgid "Plataformas"
+msgstr "Platforms"
+
+msgid "Géneros"
+msgstr "Genres"
+
+msgid "Desarrollador"
+msgstr "Developer"
+
+msgid "ID YouTube"
+msgstr "YouTube ID"
+
+msgid "Puntuación"
+msgstr "Score"
+
+msgid "Por ejemplo: QkkoHAzjnUs"
+msgstr "For example: QkkoHAzjnUs"
+
+msgid "Puntuación máxima: 10"
+msgstr "Max score: 10"
+
+msgid "Vender"
+msgstr "For sale"
+
+msgid "Marca esta casilla para vender el juego"
+msgstr "Check this box for sale this game"
+
+msgid "Precio"
+msgstr "Price"
+
+msgid "Imágen carátula URL"
+msgstr "Game Box Image URL"
+
+msgid "Disponibilidad"
+msgstr "Stock"
+
+msgid "Ventas"
+msgstr "Sales"
+
+msgid "Acción"
+msgstr "Action"
+
+msgid "Shooter"
+msgstr "Shooter"
+
+msgid "Aventura"
+msgstr "Adventures"
+
+msgid "Casual"
+msgstr "Casual"
+
+msgid "Conducción"
+msgstr "Driving"
+
+msgid "Deportes"
+msgstr "Sports"
+
+msgid "Estrategia"
+msgstr "Strategy"
+
+msgid "MMO"
+msgstr "MMO"
+
+msgid "Rol"
+msgstr "Rol"
+
+msgid "Simulación"
+msgstr "Simulation"

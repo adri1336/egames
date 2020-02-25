@@ -17,11 +17,11 @@
                 <!-- Author -->
                 <p class="lead">
                     <span>
-                        Escrito por 
+                        <?php _e('Escrito por', 'egames'); ?> 
                         <a href="<?php echo get_author_posts_url(get_the_author_ID(), get_the_author()); ?>"><?php the_author(); ?></a>
-                        el <?php echo get_the_date("d F Y") . " " . get_the_time(); ?>
+                        <?php _e('el', 'egames'); ?> <?php echo get_the_date("d F Y") . " " . get_the_time(); ?>
                     </span>
-                    <span style="float: right;"><?php echo get_post_visits_counter($postID); ?> visualizaciones</span>
+                    <span style="float: right;"><?php echo get_post_visits_counter($postID) . " " . __('visualizaciones', 'egames'); ?></span>
                 </p>
 
                 <hr>
@@ -45,11 +45,11 @@
                         ?>
                     </span>
                     <span style="float: right;">
-                        <a href="<?php echo get_permalink(get_page_by_title("noticias")); ?>" class="font-weight-bold">← Volver a noticias</a>
+                        <a href="<?php echo get_permalink(get_page_by_title("noticias")); ?>" class="font-weight-bold">← <?php _e('Volver a noticias', 'egames'); ?></a>
                     </span>
                 </p>
                     
-                <!-- Posts destacados -->
+                <!-- Posts relacionados -->
                 <div class="container">
                     <div class="row">
                         <?php
